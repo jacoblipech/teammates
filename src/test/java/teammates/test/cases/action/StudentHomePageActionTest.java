@@ -8,7 +8,6 @@ import teammates.common.util.Const;
 import teammates.logic.core.CoursesLogic;
 import teammates.storage.api.AccountsDb;
 import teammates.test.driver.AssertHelper;
-import teammates.test.driver.Priority;
 import teammates.ui.controller.ShowPageResult;
 import teammates.ui.controller.StudentHomePageAction;
 import teammates.ui.pagedata.StudentHomePageData;
@@ -16,9 +15,6 @@ import teammates.ui.pagedata.StudentHomePageData;
 /**
  * SUT: {@link StudentHomePageAction}.
  */
-// Priority added due to conflict between InstructorStudentListPageActionTest,
-// and StudentHomePageActionTest.
-@Priority(-2)
 public class StudentHomePageActionTest extends BaseActionTest {
 
     @Override
@@ -38,7 +34,7 @@ public class StudentHomePageActionTest extends BaseActionTest {
 
         ______TS("unregistered student");
 
-        gaeSimulation.loginUser(unregUserId);
+        gaeSimulation.loginAsUnregistered(unregUserId);
         StudentHomePageAction a = getAction(submissionParams);
         ShowPageResult r = getShowPageResult(a);
         AssertHelper.assertContainsRegex(
@@ -77,7 +73,7 @@ public class StudentHomePageActionTest extends BaseActionTest {
         accountsDb.createAccount(studentWithoutCourses);
         assertNotNull(accountsDb.getAccount(studentWithoutCourses.googleId));
 
-        gaeSimulation.loginUser(studentWithoutCourses.googleId);
+        gaeSimulation.loginAsUnregistered(studentWithoutCourses.googleId);
         a = getAction(submissionParams);
         r = getShowPageResult(a);
         AssertHelper.assertContainsRegex(
@@ -128,7 +124,7 @@ public class StudentHomePageActionTest extends BaseActionTest {
                 Const.ParamsNames.CHECK_PERSISTENCE_COURSE, "idOfTypicalCourse1"
         };
         studentId = "newStudent";
-        gaeSimulation.loginUser(studentId);
+        gaeSimulation.loginAsUnregistered(studentId);
         a = getAction(submissionParams);
         r = getShowPageResult(a);
         data = (StudentHomePageData) r.data;
@@ -141,7 +137,7 @@ public class StudentHomePageActionTest extends BaseActionTest {
         };
         student1InCourse1 = typicalBundle.students.get("student1InCourse1");
         studentId = student1InCourse1.googleId;
-        gaeSimulation.loginUser(studentId);
+        gaeSimulation.loginAsStudent(studentId);
         a = getAction(submissionParams);
         r = getShowPageResult(a);
         data = (StudentHomePageData) r.data;
@@ -154,7 +150,7 @@ public class StudentHomePageActionTest extends BaseActionTest {
         };
         student1InCourse1 = typicalBundle.students.get("student1InCourse1");
         studentId = student1InCourse1.googleId;
-        gaeSimulation.loginUser(studentId);
+        gaeSimulation.loginAsStudent(studentId);
         a = getAction(submissionParams);
         r = getShowPageResult(a);
         data = (StudentHomePageData) r.data;

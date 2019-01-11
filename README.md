@@ -1,14 +1,14 @@
 # TEAMMATES Developer Web Site
 
-[![Travis Build Status](https://travis-ci.org/TEAMMATES/teammates.svg?branch=master)](https://travis-ci.org/TEAMMATES/teammates)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/dvr6t33lqg6hsmxw/branch/master?svg=true)](https://ci.appveyor.com/project/damithc/teammates/branch/master)
-[![Codecov Coverage Status](https://codecov.io/gh/TEAMMATES/teammates/branch/master/graph/badge.svg)](https://codecov.io/gh/TEAMMATES/teammates)
+[![Travis Build Status](https://travis-ci.org/TEAMMATES/teammates.svg?branch=teammatesv7)](https://travis-ci.org/TEAMMATES/teammates)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/dvr6t33lqg6hsmxw/branch/teammatesv7?svg=true)](https://ci.appveyor.com/project/damithc/teammates/branch/teammatesv7)
+[![Codecov Coverage Status](https://codecov.io/gh/TEAMMATES/teammates/branch/teammatesv7/graph/badge.svg)](https://codecov.io/gh/TEAMMATES/teammates/branch/teammatesv7)
 [![License](https://img.shields.io/badge/license-GPLv2-blue.svg)](LICENSE)
 
 TEAMMATES is a free online tool for managing peer evaluations and other feedback paths of your students.
 It is provided as a cloud-based service for educators/students and is currently used by hundreds of universities across the world.
 
-<img src="src/main/webapp/images/overview.png" width="600">
+<img src="src/web/assets/images/overview.png" width="600">
 
 This is the developer web site for TEAMMATES. **Click [here](http://teammatesv4.appspot.com/) to go to the TEAMMATES product website.**
 
@@ -32,8 +32,8 @@ TEAMMATES team wishes to thank the following invaluable contributions:
 * **Google Summer of Code** Program, for including TEAMMATES as a mentor organization in *GSoC2014*, *GSoC2015*, *GSoC2016*, *GSoC2017* and *GSoC2018* editions.
 * **Facebook Open Academy** Program, for including TEAMMATES as a mentor organization in FBOA 2016.
 * **Jet Brains**, for the [Intellij IDEA](https://www.jetbrains.com/idea/) licences
-* <img src="src/main/webapp/images/yklogo.png" width="100"> [**YourKit LLC**](https://www.yourkit.com), for providing us with free licenses for the [YourKit Java Profiler](https://www.yourkit.com/java/profiler) (an industry leading profiler tool for Java applications).
-* <img src="src/main/webapp/images/saucelabs.png" width="100"> [**SauceLabs**](https://saucelabs.com), for providing us with a free [Open Sauce account](https://saucelabs.com/open-source) for cross-browser testing.
+* <img src="src/web/assets/images/yklogo.png" width="100"> [**YourKit LLC**](https://www.yourkit.com), for providing us with free licenses for the [YourKit Java Profiler](https://www.yourkit.com/java/profiler) (an industry leading profiler tool for Java applications).
+* <img src="src/web/assets/images/saucelabs.png" width="100"> [**SauceLabs**](https://saucelabs.com), for providing us with a free [Open Sauce account](https://saucelabs.com/open-source) for cross-browser testing.
 
 ## Contacting us
 
